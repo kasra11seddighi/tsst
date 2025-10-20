@@ -1,0 +1,56 @@
+/* وقتی عرض صفحه کمتر از 768px شد (تبلت) */
+@media (max-width: 768px) {
+  /* هدر */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* محصولات */
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 30px 20px;
+    gap: 15px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+}
+
+/* وقتی عرض صفحه کمتر از 480px شد (موبایل) */
+@media (max-width: 480px) {
+  .header {
+    align-items: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .products {
+    grid-template-columns: 1fr; /* هر محصول یک ردیف */
+    padding: 20px 10px;
+  }
+
+  .product-card button {
+    width: 100%;
+  }
+
+  /* باکس جستجو گوشه چپ، در موبایل بهتر وسط یا بالا بیفته */
+  .search-box-left {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+}
