@@ -108,46 +108,47 @@ body {
   padding: 20px;
   margin-top: 30px;
 }
-.search-box {
+.search-box-left {
+  position: fixed; /* یا absolute اگر داخل container هست */
+  top: 20px;       /* فاصله از بالا */
+  left: 20px;      /* فاصله از چپ */
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 30px auto;
-  width: 300px;
+  width: 250px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 30px;
+  border-radius: 25px;
   border: 1px solid rgba(255,255,255,0.2);
-  overflow: hidden;
+  padding: 5px 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-.search-box input {
+.search-box-left input {
   flex: 1;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border: none;
   outline: none;
-  font-size: 1rem;
   background: transparent;
   color: #fff;
+  font-size: 0.95rem;
 }
 
-.search-box input::placeholder {
+.search-box-left input::placeholder {
   color: #ddd;
 }
 
-.search-box button {
+.search-box-left button {
   background: #00ff99;
   border: none;
-  padding: 12px 18px;
+  padding: 10px 14px;
   cursor: pointer;
+  border-radius: 50%;
   font-size: 1rem;
   transition: 0.3s;
 }
 
-.search-box button:hover {
+.search-box-left button:hover {
   background: #00cc77;
   transform: scale(1.1);
 }
-
-
